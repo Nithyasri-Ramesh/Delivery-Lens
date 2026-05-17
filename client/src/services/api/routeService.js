@@ -3,7 +3,7 @@ import axios from 'axios'
 const BASE = 'https://router.project-osrm.org/route/v1/driving'
 
 export async function fetchRoute(startCoords, endCoords) {
-  const url = `${BASE}/${startCoords.lon},${startCoords.lat};${endCoords.lon},${endCoords.lat}`
+  const url = `${BASE}/${startCoords[1]},${startCoords[0]};${endCoords[1]},${endCoords[0]}`
 
   const response = await axios.get(url, {
     params: { overview: 'full', geometries: 'geojson', steps: false },

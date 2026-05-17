@@ -137,13 +137,13 @@ export default function DeliveryMap({ routeCoords, startCoords, endCoords, rider
             />
 
             {startCoords && (
-              <Marker position={[startCoords.lat, startCoords.lon]} icon={startIcon}>
+              <Marker position={[startCoords[0], startCoords[1]]} icon={startIcon}>
                 <Popup><strong style={{ color: '#00e676' }}>📦 Hub / Origin</strong></Popup>
               </Marker>
             )}
 
             {endCoords && (
-              <Marker position={[endCoords.lat, endCoords.lon]} icon={endIcon}>
+              <Marker position={[endCoords[0], endCoords[1]]} icon={endIcon}>
                 <Popup><strong style={{ color: '#ff1744' }}>🏠 Delivery Point</strong></Popup>
               </Marker>
             )}
